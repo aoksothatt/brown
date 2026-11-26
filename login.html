@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In | BROWN Coffee and Bakery</title>
+  <meta name="description" content="Sign in to your BROWN Club account. Order ahead, earn Beans, and enjoy exclusive member privileges across Cambodia.">
+  <meta name="theme-color" content="#161210">
+
+  <!-- Google Fonts: Playfair Display + Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Standalone Login Page Styles */
+    body.login-page-body {
+      background-color: var(--color-cream);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .login-viewport {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      min-height: 100vh;
+      width: 100%;
+    }
+
+    /* Left Side: Coffee Roastery Atmosphere */
+    .login-visual-pane {
+      position: relative;
+      background-color: var(--color-espresso);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 60px;
+      color: var(--color-white);
+    }
+
+    .login-visual-bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.55;
+    }
+
+    .login-visual-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(22, 18, 16, 0.4) 0%, rgba(22, 18, 16, 0.9) 100%);
+    }
+
+    .login-visual-content {
+      position: relative;
+      z-index: 2;
+      margin-top: auto;
+    }
+
+    .login-visual-tag {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      color: var(--color-amber);
+      text-transform: uppercase;
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    .login-visual-quote {
+      font-family: var(--font-serif);
+      font-size: 2.25rem;
+      line-height: 1.3;
+      margin-bottom: 20px;
+      color: var(--color-white);
+    }
+
+    .login-visual-sub {
+      font-size: 1rem;
+      color: rgba(255, 255, 255, 0.8);
+      line-height: 1.6;
+      max-width: 480px;
+    }
+
+    /* Right Side: Centered Login Card */
+    .login-form-pane {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 30px;
+      background-color: var(--color-cream);
+      overflow-y: auto;
+    }
+
+    .login-card-box {
+      width: 100%;
+      max-width: 460px;
+      background-color: var(--color-white);
+      border: 1px solid var(--color-latte-border);
+      border-radius: var(--radius-lg);
+      padding: 44px 36px;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .login-brand-header {
+      text-align: center;
+      margin-bottom: 28px;
+    }
+
+    .login-official-logo {
+      max-width: 220px;
+      height: auto;
+      margin: 0 auto 14px;
+      display: block;
+    }
+
+    .login-brand-subtitle {
+      font-size: 0.875rem;
+      color: var(--color-text-secondary);
+    }
+
+    /* Tab Switcher */
+    .auth-tab-nav {
+      display: flex;
+      background-color: var(--color-sand);
+      border-radius: var(--radius-pill);
+      padding: 4px;
+      margin-bottom: 26px;
+    }
+
+    .auth-tab-btn {
+      flex: 1;
+      text-align: center;
+      padding: 10px 16px;
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--color-text-secondary);
+      border-radius: var(--radius-pill);
+      transition: all var(--transition-fast);
+      background: transparent;
+      border: none;
+    }
+
+    .auth-tab-btn.active {
+      background-color: var(--color-white);
+      color: var(--color-roast);
+      box-shadow: var(--shadow-sm);
+    }
+
+    /* Input Controls */
+    .auth-input-group {
+      margin-bottom: 18px;
+    }
+
+    .auth-label {
+      display: block;
+      font-size: 0.8125rem;
+      font-weight: 600;
+      color: var(--color-roast);
+      margin-bottom: 6px;
+    }
+
+    .auth-input-wrapper {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+
+    .phone-prefix-badge {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 0 14px;
+      background-color: var(--color-sand);
+      border: 1px solid var(--color-latte-border);
+      border-right: none;
+      border-radius: var(--radius-sm) 0 0 var(--radius-sm);
+      height: 46px;
+      font-size: 0.875rem;
+      font-weight: 700;
+      color: var(--color-roast);
+    }
+
+    .auth-input {
+      width: 100%;
+      height: 46px;
+      padding: 10px 14px;
+      border: 1px solid var(--color-latte-border);
+      border-radius: var(--radius-sm);
+      background-color: var(--color-cream);
+      font-size: 0.9375rem;
+      font-family: inherit;
+      color: var(--color-roast);
+      transition: border-color var(--transition-fast);
+    }
+
+    .phone-input {
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    }
+
+    .auth-input:focus {
+      outline: none;
+      border-color: var(--color-amber);
+      background-color: var(--color-white);
+    }
+
+    .password-toggle-btn {
+      position: absolute;
+      right: 12px;
+      color: var(--color-text-muted);
+      padding: 4px;
+      font-size: 0.8125rem;
+    }
+
+    .password-toggle-btn:hover {
+      color: var(--color-roast);
+    }
+
+    /* Remember & Forgot Row */
+    .auth-options-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 22px;
+      font-size: 0.8125rem;
+    }
+
+    .remember-label {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--color-text-secondary);
+      cursor: pointer;
+    }
+
+    .forgot-pass-link {
+      color: var(--color-amber);
+      font-weight: 600;
+    }
+
+    .forgot-pass-link:hover {
+      text-decoration: underline;
+    }
+
+    /* Social Dividers */
+    .auth-divider {
+      position: relative;
+      text-align: center;
+      margin: 24px 0 20px;
+    }
+
+    .auth-divider::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background-color: var(--color-latte-border);
+    }
+
+    .auth-divider span {
+      position: relative;
+      background-color: var(--color-white);
+      padding: 0 14px;
+      font-size: 0.75rem;
+      color: var(--color-text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    /* Social Login Buttons */
+    .social-auth-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .social-auth-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      height: 44px;
+      border: 1px solid var(--color-latte-border);
+      border-radius: var(--radius-sm);
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--color-roast);
+      background-color: var(--color-white);
+      transition: all var(--transition-fast);
+      cursor: pointer;
+    }
+
+    .social-auth-btn:hover {
+      background-color: var(--color-sand);
+      border-color: #C0B7AB;
+    }
+
+    .aba-auth-btn {
+      background-color: #004D7A;
+      color: var(--color-white);
+      border-color: #004D7A;
+    }
+
+    .aba-auth-btn:hover {
+      background-color: #003B5C;
+      color: var(--color-white);
+    }
+
+    .aba-badge-icon {
+      font-weight: 800;
+      font-size: 0.8125rem;
+      background-color: #00B4D8;
+      color: #002233;
+      padding: 2px 6px;
+      border-radius: 3px;
+    }
+
+    .back-home-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.8125rem;
+      color: var(--color-text-secondary);
+      margin-bottom: 24px;
+      font-weight: 600;
+    }
+
+    .back-home-link:hover {
+      color: var(--color-amber);
+    }
+
+    @media (max-width: 900px) {
+      .login-viewport {
+        grid-template-columns: 1fr;
+      }
+      .login-visual-pane {
+        display: none;
+      }
+      .login-card-box {
+        box-shadow: none;
+        border: none;
+        padding: 20px 10px;
+        background: transparent;
+      }
+    }
+  </style>
+</head>
+<body class="login-page-body">
+  <div class="login-viewport">
+    <!-- Left Atmospheric Pane -->
+    <div class="login-visual-pane">
+      <img src="assets/images/hero/hero-1.jpg" alt="BROWN Roastery" class="login-visual-bg">
+      <div class="login-visual-overlay"></div>
+      
+      <a href="index.html" class="back-home-link" style="color:#FFF; position:relative; z-index:2;">
+        ← Back to browncoffee.com.kh
+      </a>
+
+      <div class="login-visual-content">
+        <span class="login-visual-tag">Cambodian Specialty Coffee Culture</span>
+        <h1 class="login-visual-quote">
+          "A sanctuary for Cambodia’s dreamers, thinkers, and creators."
+        </h1>
+        <p class="login-visual-sub">
+          Sign in to your BROWN Club membership to order ahead, accumulate Beans, unlock member discounts, and enjoy priority roastery pickup.
+        </p>
+      </div>
+    </div>
+
+    <!-- Right Login Form Pane -->
+    <div class="login-form-pane">
+      <div class="login-card-box">
+        <a href="index.html" class="back-home-link">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+          Return to Home
+        </a>
+
+        <!-- Official BROWN Logo Header -->
+        <div class="login-brand-header">
+          <img src="assets/images/brown-logo.png" alt="BROWN Coffee and Bakery" class="login-official-logo">
+          <p class="login-brand-subtitle">Sign in to manage your BROWN Card & Rewards</p>
+        </div>
+
+        <!-- Auth Tabs: Sign In / Register -->
+        <div class="auth-tab-nav" role="tablist">
+          <button class="auth-tab-btn active" id="tabSignInBtn" role="tab" aria-selected="true">Sign In</button>
+          <button class="auth-tab-btn" id="tabRegisterBtn" role="tab" aria-selected="false">Join BROWN Club</button>
+        </div>
+
+        <!-- SIGN IN FORM -->
+        <form id="standaloneLoginForm" onsubmit="return false;">
+          <div class="auth-input-group">
+            <label class="auth-label" for="loginPhone">Cambodian Phone Number or Email</label>
+            <div class="auth-input-wrapper">
+              <div class="phone-prefix-badge">
+                <span>🇰🇭</span> +855
+              </div>
+              <input type="tel" id="loginPhone" class="auth-input phone-input" placeholder="12 345 678" required>
+            </div>
+          </div>
+
+          <div class="auth-input-group">
+            <label class="auth-label" for="loginPassword">Password</label>
+            <div class="auth-input-wrapper">
+              <input type="password" id="loginPassword" class="auth-input" placeholder="••••••••" required>
+              <button type="button" class="password-toggle-btn" id="togglePasswordBtn">Show</button>
+            </div>
+          </div>
+
+          <div class="auth-options-row">
+            <label class="remember-label">
+              <input type="checkbox" id="rememberMe" checked> Remember me
+            </label>
+            <a href="#" class="forgot-pass-link" onclick="alert('Password reset link sent to your phone via SMS.'); return false;">Forgot password?</a>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block" id="submitLoginBtn">
+            Sign In to BROWN
+          </button>
+
+          <div class="auth-divider">
+            <span>or sign in with</span>
+          </div>
+
+          <!-- Social One-Tap Auth Grid -->
+          <div class="social-auth-grid">
+            <button type="button" class="social-auth-btn aba-auth-btn" id="abaPayLoginBtn">
+              <span class="aba-badge-icon">ABA</span>
+              <span>Quick Sign In with ABA Mobile</span>
+            </button>
+            <button type="button" class="social-auth-btn" onclick="simulateLogin('Google User');">
+              <svg width="18" height="18" viewBox="0 0 24 24"><path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.66-5.17 3.66-9.17z"/><path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.25v3.15C3.26 21.36 7.33 24 12 24z"/><path fill="#FBBC05" d="M5.28 14.27c-.25-.72-.38-1.49-.38-2.27s.13-1.55.38-2.27V6.58H1.25C.45 8.18 0 9.99 0 12s.45 3.82 1.25 5.42l4.03-3.15z"/><path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.33 0 3.26 2.64 1.25 6.58l4.03 3.15c.95-2.83 3.6-4.98 6.72-4.98z"/></svg>
+              <span>Continue with Google</span>
+            </button>
+            <button type="button" class="social-auth-btn" onclick="simulateLogin('Apple User');">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.37c.62-.75 1.04-1.8 0.92-2.87-.9.04-2 .6-2.65 1.35-.57.65-1.07 1.73-0.93 2.76 1.01.08 2.04-.5 2.66-1.24z"/></svg>
+              <span>Continue with Apple</span>
+            </button>
+          </div>
+        </form>
+
+        <!-- REGISTER FORM (Hidden by default) -->
+        <form id="standaloneRegisterForm" style="display:none;" onsubmit="return false;">
+          <div class="auth-input-group">
+            <label class="auth-label" for="regFullName">Full Name</label>
+            <input type="text" id="regFullName" class="auth-input" placeholder="e.g. Sovannarith Chhay" required>
+          </div>
+
+          <div class="auth-input-group">
+            <label class="auth-label" for="regPhone">Cambodian Phone (+855)</label>
+            <div class="auth-input-wrapper">
+              <div class="phone-prefix-badge">🇰🇭 +855</div>
+              <input type="tel" id="regPhone" class="auth-input phone-input" placeholder="12 345 678" required>
+            </div>
+          </div>
+
+          <div class="auth-input-group">
+            <label class="auth-label" for="regEmail">Email Address</label>
+            <input type="email" id="regEmail" class="auth-input" placeholder="name@example.com" required>
+          </div>
+
+          <div class="auth-input-group">
+            <label class="auth-label" for="regStore">Home Boutique Roastery</label>
+            <select id="regStore" class="auth-input" style="height:46px;">
+              <option value="bkk1">BKK1 Flagship Roastery (Phnom Penh)</option>
+              <option value="riverside">Riverside Heritage Boutique (Phnom Penh)</option>
+              <option value="toulkork">Toul Kork Treehouse Roastery (Phnom Penh)</option>
+              <option value="siemreap">Wat Bo Heritage Boutique (Siem Reap)</option>
+            </select>
+          </div>
+
+          <div class="auth-input-group">
+            <label class="auth-label" for="regPassword">Create Password</label>
+            <input type="password" id="regPassword" class="auth-input" placeholder="At least 6 characters" required>
+          </div>
+
+          <div class="auth-options-row" style="margin-bottom:18px;">
+            <label class="remember-label" style="font-size:0.75rem;">
+              <input type="checkbox" id="regTerms" checked required>
+              I agree to the BROWN Loyalty Program Terms & receive free birthday drinks.
+            </label>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block" id="submitRegisterBtn">
+            Join BROWN Club & Claim Free Brew
+          </button>
+        </form>
+
+        <!-- ACTIVE LOGGED-IN PROFILE (Shown upon sign-in) -->
+        <div id="loggedInView" style="display:none; text-align:center; padding:20px 0;">
+          <div style="width:70px; height:70px; border-radius:50%; background:var(--color-sand); color:var(--color-amber); font-size:1.8rem; display:flex; align-items:center; justify-content:center; margin:0 auto 14px; border:2px solid var(--color-amber);">
+            ☕
+          </div>
+          <h3 style="font-family:var(--font-serif); font-size:1.6rem; color:var(--color-roast); margin-bottom:4px;" id="loggedUserName">Sovannarith Chhay</h3>
+          <span style="font-size:0.75rem; font-weight:700; letter-spacing:0.1em; color:var(--color-copper); background:var(--color-sand); padding:4px 10px; border-radius:var(--radius-pill); display:inline-block; margin-bottom:18px;">
+            BLACK RESERVE MEMBER
+          </span>
+
+          <div style="background:var(--color-sand); border-radius:var(--radius-md); padding:16px; margin-bottom:20px; text-align:left;">
+            <div style="display:flex; justify-content:space-between; margin-bottom:8px;">
+              <span style="font-size:0.8125rem; color:var(--color-text-secondary);">Stored Card Balance:</span>
+              <strong style="color:var(--color-roast); font-size:1.1rem;">$42.50 <small>/ 172,000៛</small></strong>
+            </div>
+            <div style="display:flex; justify-content:space-between;">
+              <span style="font-size:0.8125rem; color:var(--color-text-secondary);">Loyalty Beans:</span>
+              <strong style="color:var(--color-amber); font-size:1.1rem;">1,480 Beans</strong>
+            </div>
+          </div>
+
+          <a href="index.html#menu" class="btn btn-primary btn-block mb-3">Order Ahead with Stored Balance</a>
+          <button type="button" class="btn btn-outline-dark btn-block" id="logoutBtn">Sign Out</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="toast-container" id="toastContainer"></div>
+
+  <script>
+    // Tab switching logic
+    const tabSignInBtn = document.getElementById('tabSignInBtn');
+    const tabRegisterBtn = document.getElementById('tabRegisterBtn');
+    const loginForm = document.getElementById('standaloneLoginForm');
+    const regForm = document.getElementById('standaloneRegisterForm');
+    const loggedInView = document.getElementById('loggedInView');
+
+    tabSignInBtn.addEventListener('click', () => {
+      tabSignInBtn.classList.add('active');
+      tabRegisterBtn.classList.remove('active');
+      loginForm.style.display = 'block';
+      regForm.style.display = 'none';
+      loggedInView.style.display = 'none';
+    });
+
+    tabRegisterBtn.addEventListener('click', () => {
+      tabRegisterBtn.classList.add('active');
+      tabSignInBtn.classList.remove('active');
+      loginForm.style.display = 'none';
+      regForm.style.display = 'block';
+      loggedInView.style.display = 'none';
+    });
+
+    // Password visibility toggle
+    const togglePasswordBtn = document.getElementById('togglePasswordBtn');
+    const loginPassword = document.getElementById('loginPassword');
+    if (togglePasswordBtn && loginPassword) {
+      togglePasswordBtn.addEventListener('click', () => {
+        if (loginPassword.type === 'password') {
+          loginPassword.type = 'text';
+          togglePasswordBtn.textContent = 'Hide';
+        } else {
+          loginPassword.type = 'password';
+          togglePasswordBtn.textContent = 'Show';
+        }
+      });
+    }
+
+    // Toast function
+    function showToast(msg) {
+      const container = document.getElementById('toastContainer');
+      const t = document.createElement('div');
+      t.className = 'toast';
+      t.innerHTML = `<span>✓</span> <div>${msg}</div>`;
+      container.appendChild(t);
+      setTimeout(() => {
+        t.classList.add('toast-out');
+        setTimeout(() => t.remove(), 300);
+      }, 3500);
+    }
+
+    function simulateLogin(userName) {
+      document.querySelector('.auth-tab-nav').style.display = 'none';
+      loginForm.style.display = 'none';
+      regForm.style.display = 'none';
+      loggedInView.style.display = 'block';
+      document.getElementById('loggedUserName').textContent = userName || 'BROWN Member';
+      showToast(`Welcome back, ${userName}! Signed in successfully.`);
+      try {
+        localStorage.setItem('brown_user', JSON.stringify({ name: userName, tier: 'BLACK RESERVE' }));
+      } catch(e){}
+    }
+
+    loginForm.addEventListener('submit', () => {
+      const phone = document.getElementById('loginPhone').value || '855 Member';
+      simulateLogin(phone.includes('@') ? phone.split('@')[0] : 'Sovannarith Chhay');
+    });
+
+    regForm.addEventListener('submit', () => {
+      const name = document.getElementById('regFullName').value || 'New Member';
+      simulateLogin(name);
+    });
+
+    document.getElementById('abaPayLoginBtn').addEventListener('click', () => {
+      simulateLogin('ABA Verified Guest');
+    });
+
+    document.getElementById('logoutBtn').addEventListener('click', () => {
+      try { localStorage.removeItem('brown_user'); } catch(e){}
+      document.querySelector('.auth-tab-nav').style.display = 'flex';
+      loggedInView.style.display = 'none';
+      loginForm.style.display = 'block';
+      showToast('Signed out of BROWN Club.');
+    });
+
+    // Check if previously logged in
+    try {
+      const savedUser = localStorage.getItem('brown_user');
+      if (savedUser) {
+        const u = JSON.parse(savedUser);
+        simulateLogin(u.name);
+      }
+    } catch(e){}
+  </script>
+</body>
+</html>

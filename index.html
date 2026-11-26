@@ -1,0 +1,1658 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BROWN Coffee & Roastery | Cambodian Specialty Coffee Culture</title>
+  <meta name="description" content="Experience Cambodian specialty coffee culture, artisan bakery, and architectural sanctuaries inspired by BROWN Coffee Cambodia. Proudly roasted in Phnom Penh since 2009.">
+  <meta name="keywords" content="BROWN Coffee, Cambodia specialty coffee, Phnom Penh coffee, Mondulkiri coffee, artisan bakery, Cambodian coffee roasters">
+  <meta name="theme-color" content="#161210">
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="BROWN Coffee & Roastery | Cambodian Specialty Coffee">
+  <meta property="og:description" content="Handcrafted coffee, artisan bakery, and architectural sanctuaries in Phnom Penh and Siem Reap.">
+  <meta property="og:image" content="assets/images/hero/hero-1.jpg">
+
+  <!-- Google Fonts: Playfair Display + Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="site-body">
+  <!-- Top Announcement Bar -->
+  <aside class="announcement-bar" id="announcementBar" role="region" aria-label="Announcement">
+    <div class="container announcement-inner">
+      <div class="announcement-content">
+        <span class="announcement-badge">SPECIALTY HARVEST</span>
+        <span class="announcement-text">Complimentary Mondulkiri Pour-Over with any 250g Whole Bean bag. Available at all Roasteries.</span>
+      </div>
+      <button class="announcement-close" id="closeAnnouncement" aria-label="Dismiss announcement">&times;</button>
+    </div>
+  </aside>
+
+  <!-- Sticky Main Header -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-container">
+      <!-- Brand Logo -->
+      <a href="#home" class="brand-logo" aria-label="BROWN Coffee Home">
+        <img src="assets/images/brown-logo.png" alt="BROWN Coffee and Bakery" class="brand-logo-img">
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="desktop-nav" aria-label="Primary Navigation">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
+          <li class="nav-item"><a href="#menu" class="nav-link">Menu</a></li>
+          <li class="nav-item"><a href="#card" class="nav-link">BROWN Card</a></li>
+          <li class="nav-item"><a href="#locations" class="nav-link">Locations</a></li>
+          <li class="nav-item"><a href="#merchandise" class="nav-link">Merchandise</a></li>
+          <li class="nav-item"><a href="#promotions" class="nav-link">News & Promos</a></li>
+          <li class="nav-item"><a href="#story" class="nav-link">Our Story</a></li>
+          <li class="nav-item"><a href="#careers" class="nav-link">Careers</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Action Utilities -->
+      <div class="header-actions">
+        <!-- Search Button -->
+        <button class="action-btn" id="openSearchBtn" aria-label="Open search modal" title="Search Menu & Stores (Press /)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="action-svg">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </button>
+
+        <!-- Account / Card Login Modal Trigger -->
+        <button class="account-auth-btn" id="accountBtn" aria-label="Sign In to BROWN Club" title="Sign In to BROWN Club">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="auth-icon-svg">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+          <span class="auth-btn-label">Sign In</span>
+        </button>
+
+        <!-- Cart / Bag Trigger -->
+        <button class="action-btn cart-btn" id="openCartBtn" aria-label="View Order Bag" title="Your Coffee Bag">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="action-svg">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+          <span class="cart-badge" id="cartBadgeCount">0</span>
+        </button>
+
+        <!-- Order Ahead CTA -->
+        <a href="#menu" class="btn btn-primary btn-sm header-order-btn">Order Ahead</a>
+
+        <!-- Mobile Hamburger Toggle -->
+        <button class="mobile-toggle" id="mobileMenuToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Navigation -->
+  <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+    <div class="mobile-drawer-backdrop" id="drawerBackdrop"></div>
+    <div class="mobile-drawer-panel">
+      <div class="drawer-header">
+        <a href="#home" style="display:block;">
+          <img src="assets/images/brown-logo.png" alt="BROWN Coffee and Bakery" style="height:36px; width:auto; display:block;">
+        </a>
+        <button class="drawer-close" id="closeDrawerBtn" aria-label="Close menu">&times;</button>
+      </div>
+
+      <nav class="mobile-nav">
+        <ul class="mobile-nav-list">
+          <li><a href="#home" class="mobile-nav-link">Home</a></li>
+          <li><a href="#menu" class="mobile-nav-link">Menu & Drinks</a></li>
+          <li><a href="#card" class="mobile-nav-link">BROWN Card & Perks</a></li>
+          <li><a href="#app" class="mobile-nav-link">Mobile Application</a></li>
+          <li><a href="#locations" class="mobile-nav-link">Store Locations</a></li>
+          <li><a href="#merchandise" class="mobile-nav-link">Merchandise & Beans</a></li>
+          <li><a href="#promotions" class="mobile-nav-link">Promotions & News</a></li>
+          <li><a href="#story" class="mobile-nav-link">Our Heritage</a></li>
+          <li><a href="#careers" class="mobile-nav-link">Careers & Culture</a></li>
+          <li style="border-top:1px dashed var(--color-latte-border); padding-top:8px;">
+            <a href="login.html" class="mobile-nav-link" style="color:var(--color-amber);">🔐 Sign In to BROWN Club</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="drawer-footer">
+        <a href="#menu" class="btn btn-primary btn-block mb-3">Order Online</a>
+        <div class="drawer-contact">
+          <p>📞 Hotline: +855 23 215 215</p>
+          <p>✉️ info@browncoffee.com.kh</p>
+        </div>
+        <div class="drawer-socials">
+          <a href="#" aria-label="Facebook">FB</a>
+          <a href="#" aria-label="Instagram">IG</a>
+          <a href="#" aria-label="Telegram">TG</a>
+          <a href="#" aria-label="LinkedIn">LI</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main id="mainContent">
+    <!-- SECTION B: Hero Section (Promotional Slider) -->
+    <section class="hero-section" id="home" aria-label="Featured Promotions">
+      <div class="hero-slider" id="heroSlider">
+        <!-- Slide 1: Signature Palm Sugar Latte -->
+        <article class="hero-slide active" data-slide="0">
+          <div class="hero-image-wrapper">
+            <img src="assets/images/hero/hero-1.jpg" alt="Barista crafting espresso with steam in a modern boutique" class="hero-bg-img">
+            <div class="hero-overlay"></div>
+          </div>
+          <div class="container hero-content-container">
+            <div class="hero-content">
+              <span class="hero-tag animate-in">THE CAMBODIAN SIGNATURE</span>
+              <h1 class="hero-title animate-in">Artisanal Palm Sugar Iced Latte</h1>
+              <p class="hero-desc animate-in">
+                Handcrafted Kampong Speu organic palm sugar slow-steeped with our signature Mondulkiri espresso roast and fresh velvet cream. The authentic taste of Phnom Penh specialty coffee.
+              </p>
+              <div class="hero-actions animate-in">
+                <a href="#menu" class="btn btn-primary">Discover the Menu</a>
+                <a href="#story" class="btn btn-outline-light">Our Roastery Craft</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Slide 2: Single Origin Beans -->
+        <article class="hero-slide" data-slide="1">
+          <div class="hero-image-wrapper">
+            <img src="assets/images/hero/hero-2.jpg" alt="Rich iced coffee cold brew served with ice in glass" class="hero-bg-img" loading="lazy">
+            <div class="hero-overlay"></div>
+          </div>
+          <div class="container hero-content-container">
+            <div class="hero-content">
+              <span class="hero-tag animate-in">DIRECT TRADE HIGHLANDS</span>
+              <h2 class="hero-title animate-in">Mondulkiri Plateau Honey Process</h2>
+              <p class="hero-desc animate-in">
+                Grown at 850 meters elevation under shade canopy. Hand-sorted cherries, delicate floral jasmine aromatics, and brown sugar finish. Freshly micro-roasted weekly in Phnom Penh.
+              </p>
+              <div class="hero-actions animate-in">
+                <a href="#merchandise" class="btn btn-primary">Shop Whole Beans</a>
+                <a href="#locations" class="btn btn-outline-light">Taste at Roastery</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Slide 3: Artisan Bakery -->
+        <article class="hero-slide" data-slide="2">
+          <div class="hero-image-wrapper">
+            <img src="assets/images/hero/hero-3.jpg" alt="Fresh artisan baked croissants and pastries on a wooden table" class="hero-bg-img" loading="lazy">
+            <div class="hero-overlay"></div>
+          </div>
+          <div class="container hero-content-container">
+            <div class="hero-content">
+              <span class="hero-tag animate-in">BAKED FRESH DAILY</span>
+              <h2 class="hero-title animate-in">Normandy Butter Pastries & Brunch</h2>
+              <p class="hero-desc animate-in">
+                Hand-laminated flaky croissants, Belgian chocolate rolls, and warm sourdough sandwiches crafted daily at 5:00 AM by our pastry artisans to pair with your morning brew.
+              </p>
+              <div class="hero-actions animate-in">
+                <a href="#menu" class="btn btn-primary">Explore Bakery</a>
+                <a href="#card" class="btn btn-outline-light">Morning Club Rewards</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Slide 4: Architectural Sanctuaries -->
+        <article class="hero-slide" data-slide="3">
+          <div class="hero-image-wrapper">
+            <img src="assets/images/hero/hero-4.jpg" alt="Warm modern architectural coffee shop interior with raw concrete and teakwood" class="hero-bg-img" loading="lazy">
+            <div class="hero-overlay"></div>
+          </div>
+          <div class="container hero-content-container">
+            <div class="hero-content">
+              <span class="hero-tag animate-in">ARCHITECTURAL DESIGN</span>
+              <h2 class="hero-title animate-in">Spaces Designed for Reflection & Community</h2>
+              <p class="hero-desc animate-in">
+                Founded by Cambodian architects in 2009. Raw architectural concrete, locally cured teakwood, and tropical light create an inspiring oasis across 25+ boutiques in Cambodia.
+              </p>
+              <div class="hero-actions animate-in">
+                <a href="#locations" class="btn btn-primary">Find Nearest Boutique</a>
+                <a href="#story" class="btn btn-outline-light">Our 15-Year Story</a>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- Slider Controls -->
+      <div class="hero-controls-wrapper container">
+        <div class="hero-nav-buttons">
+          <button class="hero-nav-btn prev" id="heroPrevBtn" aria-label="Previous Slide">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+          </button>
+          <button class="hero-nav-btn next" id="heroNextBtn" aria-label="Next Slide">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Slider Pagination Indicators -->
+        <div class="hero-pagination" id="heroPagination" role="tablist" aria-label="Slideshow pages">
+          <button class="page-indicator active" data-index="0" role="tab" aria-selected="true" aria-label="Slide 1"></button>
+          <button class="page-indicator" data-index="1" role="tab" aria-selected="false" aria-label="Slide 2"></button>
+          <button class="page-indicator" data-index="2" role="tab" aria-selected="false" aria-label="Slide 3"></button>
+          <button class="page-indicator" data-index="3" role="tab" aria-selected="false" aria-label="Slide 4"></button>
+        </div>
+
+        <!-- Slide Counter -->
+        <div class="hero-counter">
+          <span class="counter-current" id="heroCurrentNum">01</span>
+          <span class="counter-divider">/</span>
+          <span class="counter-total">04</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Brand Philosophy Ribbon -->
+    <section class="brand-ribbon">
+      <div class="container ribbon-grid">
+        <div class="ribbon-item">
+          <div class="ribbon-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="M12 6v6l4 2"></path>
+            </svg>
+          </div>
+          <div class="ribbon-text">
+            <h4>Roasted Weekly in Phnom Penh</h4>
+            <p>Micro-batch roasted for peak aroma & flavor</p>
+          </div>
+        </div>
+        <div class="ribbon-item">
+          <div class="ribbon-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+            </svg>
+          </div>
+          <div class="ribbon-text">
+            <h4>Mondulkiri Direct Trade</h4>
+            <p>Supporting indigenous highland farmers</p>
+          </div>
+        </div>
+        <div class="ribbon-item">
+          <div class="ribbon-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+              <polyline points="9 22 9 12 15 12 15 22"></polyline>
+            </svg>
+          </div>
+          <div class="ribbon-text">
+            <h4>25+ Architectural Boutiques</h4>
+            <p>Serene spaces in Phnom Penh & Siem Reap</p>
+          </div>
+        </div>
+        <div class="ribbon-item">
+          <div class="ribbon-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+            </svg>
+          </div>
+          <div class="ribbon-text">
+            <h4>BROWN Club Loyalty</h4>
+            <p>Earn Beans, free birthday brews & fast pickup</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION C: Featured Products Showcase -->
+    <section class="section-padding products-section" id="menu">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-header text-center">
+          <span class="sub-heading">CRAFTED WITH INTENTION</span>
+          <h2 class="section-title">Signature Menu & Roasts</h2>
+          <p class="section-subtitle">
+            From our legendary Kampong Speu palm sugar creations to single-origin pour-overs and slow-fermented French pastries.
+          </p>
+
+          <!-- Category Filter Tabs -->
+          <div class="filter-tabs" id="productFilterTabs" role="tablist">
+            <button class="filter-tab active" data-filter="all" role="tab" aria-selected="true">All Highlights</button>
+            <button class="filter-tab" data-filter="signature" role="tab" aria-selected="false">Signatures & Espresso</button>
+            <button class="filter-tab" data-filter="iced" role="tab" aria-selected="false">Iced & Cold Brew</button>
+            <button class="filter-tab" data-filter="tea" role="tab" aria-selected="false">Matcha & Teas</button>
+            <button class="filter-tab" data-filter="bakery" role="tab" aria-selected="false">Bakery & Bakes</button>
+          </div>
+        </div>
+
+        <!-- Product Grid -->
+        <div class="product-grid" id="productGrid">
+          <!-- Item 1 -->
+          <article class="product-card" data-category="signature" data-id="p1">
+            <div class="product-media">
+              <span class="product-badge">BROWN ICON</span>
+              <img src="assets/images/products/prod-palm-sugar.jpg" alt="Iced Palm Sugar Latte with layered coffee and milk" class="product-img" loading="lazy">
+              <div class="product-hover-overlay">
+                <button class="btn btn-sm btn-light quick-view-btn" data-id="p1">Quick Details</button>
+              </div>
+            </div>
+            <div class="product-info">
+              <div class="product-meta">
+                <span class="product-cat">CAMBODIAN SIGNATURE</span>
+                <span class="product-price">$3.45 <small>/ 14,000៛</small></span>
+              </div>
+              <h3 class="product-title">Palm Sugar Iced Latte</h3>
+              <p class="product-desc">
+                Organic artisanal Kampong Speu palm sugar syrup blended with double ristretto espresso and farm-fresh chilled milk.
+              </p>
+              <div class="product-card-footer">
+                <span class="tasting-notes">Notes: Toffee, caramel, floral aroma</span>
+                <button class="add-to-bag-icon" data-id="p1" aria-label="Add to bag" title="Add to Order Bag">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 2 -->
+          <article class="product-card" data-category="iced" data-id="p2">
+            <div class="product-media">
+              <span class="product-badge">SLOW STEEPED</span>
+              <img src="assets/images/products/prod-cold-brew.jpg" alt="Brown Signature Cold Brew over clear ice sphere" class="product-img" loading="lazy">
+              <div class="product-hover-overlay">
+                <button class="btn btn-sm btn-light quick-view-btn" data-id="p2">Quick Details</button>
+              </div>
+            </div>
+            <div class="product-info">
+              <div class="product-meta">
+                <span class="product-cat">COLD BREW RESERVE</span>
+                <span class="product-price">$3.85 <small>/ 15,500៛</small></span>
+              </div>
+              <h3 class="product-title">BROWN 18-Hour Cold Brew</h3>
+              <p class="product-desc">
+                Cold-extracted for 18 hours using triple-filtered mountain spring water and Mondulkiri medium-dark roast beans.
+              </p>
+              <div class="product-card-footer">
+                <span class="tasting-notes">Notes: Dark chocolate, molasses, crisp finish</span>
+                <button class="add-to-bag-icon" data-id="p2" aria-label="Add to bag">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 3 -->
+          <article class="product-card" data-category="signature" data-id="p3">
+            <div class="product-media">
+              <img src="assets/images/products/prod-spanish-latte.jpg" alt="Rich Spanish Latte with sweet cream swirl" class="product-img" loading="lazy">
+              <div class="product-hover-overlay">
+                <button class="btn btn-sm btn-light quick-view-btn" data-id="p3">Quick Details</button>
+              </div>
+            </div>
+            <div class="product-info">
+              <div class="product-meta">
+                <span class="product-cat">SIGNATURE SWEET</span>
+                <span class="product-price">$3.65 <small>/ 14,800៛</small></span>
+              </div>
+              <h3 class="product-title">Velvet Spanish Latte</h3>
+              <p class="product-desc">
+                Double shot of intense espresso poured over lightly sweetened condensed milk and silky microfoam. Available iced or hot.
+              </p>
+              <div class="product-card-footer">
+                <span class="tasting-notes">Notes: Butterscotch, hazelnut cream</span>
+                <button class="add-to-bag-icon" data-id="p3" aria-label="Add to bag">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 4 -->
+          <article class="product-card" data-category="signature" data-id="p4">
+            <div class="product-media">
+              <span class="product-badge">POUR-OVER BAR</span>
+              <img src="assets/images/products/prod-pourover.jpg" alt="Handcrafted pour-over coffee dripping through paper filter" class="product-img" loading="lazy">
+              <div class="product-hover-overlay">
+                <button class="btn btn-sm btn-light quick-view-btn" data-id="p4">Quick Details</button>
+              </div>
+            </div>
+            <div class="product-info">
+              <div class="product-meta">
+                <span class="product-cat">SINGLE ORIGIN</span>
+                <span class="product-price">$4.20 <small>/ 17,000៛</small></span>
+              </div>
+              <h3 class="product-title">Mondulkiri Honey Pour-Over</h3>
+              <p class="product-desc">
+                Single-origin lot brewed manually via Origami dripper. Sourced directly from our partner family farms in Sen Monorom.
+              </p>
+              <div class="product-card-footer">
+                <span class="tasting-notes">Notes: Jasmine, Meyer lemon, wild honey</span>
+                <button class="add-to-bag-icon" data-id="p4" aria-label="Add to bag">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 5 -->
+          <article class="product-card" data-category="tea" data-id="p5">
+            <div class="product-media">
+              <span class="product-badge">CEREMONIAL</span>
+              <img src="assets/images/products/prod-matcha-espresso.jpg" alt="Layered vibrant green matcha latte with espresso shot" class="product-img" loading="lazy">
+              <div class="product-hover-overlay">
+                <button class="btn btn-sm btn-light quick-view-btn" data-id="p5">Quick Details</button>
+              </div>
+            </div>
+            <div class="product-info">
+              <div class="product-meta">
+                <span class="product-cat">ARTISAN FUSION</span>
+                <span class="product-price">$3.95 <small>/ 16,000៛</small></span>
+              </div>
+              <h3 class="product-title">Kyoto Matcha Espresso Fusion</h3>
+              <p class="product-desc">
+                First-harvest Uji ceremonial matcha layered with fresh organic milk and topped with an espresso float.
+              </p>
+              <div class="product-card-footer">
+                <span class="tasting-notes">Notes: Earthy umami, roasted cocoa, creamy</span>
+                <button class="add-to-bag-icon" data-id="p5" aria-label="Add to bag">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 6 -->
+          <article class="product-card" data-category="iced" data-id="p6">
+            <div class="product-media">
+              <span class="product-badge">SEASONAL</span>
+              <img src="assets/images/products/prod-cloud-latte.jpg" alt="Iced coffee crowned with thick salted caramel cloud foam" class="product-img" loading="lazy">
+              <div class="product-hover-overlay">
+                <button class="btn btn-sm btn-light quick-view-btn" data-id="p6">Quick Details</button>
+              </div>
+            </div>
+            <div class="product-info">
+              <div class="product-meta">
+                <span class="product-cat">COLD FOAM CREATION</span>
+                <span class="product-price">$3.75 <small>/ 15,200៛</small></span>
+              </div>
+              <h3 class="product-title">Salted Cloud Caramel Latte</h3>
+              <p class="product-desc">
+                Chilled house roast iced latte crowned with whipped sea salt cream foam and Kampot fleur de sel drizzle.
+              </p>
+              <div class="product-card-footer">
+                <span class="tasting-notes">Notes: Sweet-savory, buttery, velvety froth</span>
+                <button class="add-to-bag-icon" data-id="p6" aria-label="Add to bag">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 7 -->
+          <article class="product-card" data-category="bakery" data-id="p7">
+            <div class="product-media">
+              <span class="product-badge">BAKED AT 5 AM</span>
+              <img src="assets/images/products/prod-croissant.jpg" alt="Golden brown French butter croissant freshly baked" class="product-img" loading="lazy">
+              <div class="product-hover-overlay">
+                <button class="btn btn-sm btn-light quick-view-btn" data-id="p7">Quick Details</button>
+              </div>
+            </div>
+            <div class="product-info">
+              <div class="product-meta">
+                <span class="product-cat">FRENCH BAKERY</span>
+                <span class="product-price">$2.60 <small>/ 10,500៛</small></span>
+              </div>
+              <h3 class="product-title">Normandy Pure Butter Croissant</h3>
+              <p class="product-desc">
+                72-layer hand-laminated pastry crafted with French AOP Isigny Sainte-Mère butter. Crisp golden exterior, honeycomb crumb.
+              </p>
+              <div class="product-card-footer">
+                <span class="tasting-notes">Pairs with: Americano or Flat White</span>
+                <button class="add-to-bag-icon" data-id="p7" aria-label="Add to bag">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 8 -->
+          <article class="product-card" data-category="bakery" data-id="p8">
+            <div class="product-media">
+              <img src="assets/images/products/prod-chocolat.jpg" alt="Pain au chocolat with rich dark chocolate batons" class="product-img" loading="lazy">
+              <div class="product-hover-overlay">
+                <button class="btn btn-sm btn-light quick-view-btn" data-id="p8">Quick Details</button>
+              </div>
+            </div>
+            <div class="product-info">
+              <div class="product-meta">
+                <span class="product-cat">ARTISAN CHOCOLAT</span>
+                <span class="product-price">$2.95 <small>/ 12,000៛</small></span>
+              </div>
+              <h3 class="product-title">Belgian Dark Pain au Chocolat</h3>
+              <p class="product-desc">
+                Buttery laminated croissant pastry enveloped around two double batons of 70% dark Belgian cocoa.
+              </p>
+              <div class="product-card-footer">
+                <span class="tasting-notes">Pairs with: Cappuccino or Cold Brew</span>
+                <button class="add-to-bag-icon" data-id="p8" aria-label="Add to bag">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 9 -->
+          <article class="product-card" data-category="tea" data-id="p9">
+            <div class="product-media">
+              <img src="assets/images/products/prod-yuzu-tea.jpg" alt="Iced sparkling yuzu cascara tea with citrus slice" class="product-img" loading="lazy">
+              <div class="product-hover-overlay">
+                <button class="btn btn-sm btn-light quick-view-btn" data-id="p9">Quick Details</button>
+              </div>
+            </div>
+            <div class="product-info">
+              <div class="product-meta">
+                <span class="product-cat">REFRESHER & BOTANICAL</span>
+                <span class="product-price">$3.50 <small>/ 14,200៛</small></span>
+              </div>
+              <h3 class="product-title">Sparkling Yuzu Cascara Fizz</h3>
+              <p class="product-desc">
+                Brewed dried coffee cherry tea (cascara) infused with Japanese yuzu citrus and lightly carbonated mountain water.
+              </p>
+              <div class="product-card-footer">
+                <span class="tasting-notes">Notes: Hibiscus, rosehip, tart citrus</span>
+                <button class="add-to-bag-icon" data-id="p9" aria-label="Add to bag">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 10 -->
+          <article class="product-card" data-category="iced" data-id="p10">
+            <div class="product-media">
+              <span class="product-badge">SLOW DRIP</span>
+              <img src="assets/images/products/prod-kyoto-drip.jpg" alt="Towering glass Kyoto slow drip cold brew coffee maker" class="product-img" loading="lazy">
+              <div class="product-hover-overlay">
+                <button class="btn btn-sm btn-light quick-view-btn" data-id="p10">Quick Details</button>
+              </div>
+            </div>
+            <div class="product-info">
+              <div class="product-meta">
+                <span class="product-cat">JAPANESE DRIP TOWER</span>
+                <span class="product-price">$4.10 <small>/ 16,500៛</small></span>
+              </div>
+              <h3 class="product-title">Kyoto Slow-Drip Reserve</h3>
+              <p class="product-desc">
+                One single drop of ice water every two seconds through our Mondulkiri dark roast glass towers. Exceptionally smooth and syrupy body.
+              </p>
+              <div class="product-card-footer">
+                <span class="tasting-notes">Notes: Cedar, dark cherry, dark cocoa</span>
+                <button class="add-to-bag-icon" data-id="p10" aria-label="Add to bag">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- View Full Menu CTA Banner -->
+        <div class="menu-cta-banner">
+          <div class="menu-cta-content">
+            <h3>Craving our full kitchen and seasonal menu?</h3>
+            <p>Explore all 60+ handcrafted beverages, fresh brunch sandwiches, salads, and whole artisan cakes.</p>
+          </div>
+          <div class="menu-cta-actions">
+            <a href="#locations" class="btn btn-outline-dark">Visit a Roastery</a>
+            <a href="#app" class="btn btn-primary">Order on Mobile App</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION D: Promotions & News -->
+    <section class="section-padding bg-sand-subtle" id="promotions">
+      <div class="container">
+        <div class="section-header">
+          <div class="header-split">
+            <div>
+              <span class="sub-heading">HAPPENINGS & CAMPAIGNS</span>
+              <h2 class="section-title">News, Stories & Seasonals</h2>
+            </div>
+            <p class="section-lead-text">
+              Stay connected with our harvest journeys, limited-lot coffees, masterclasses, and community updates across Cambodia.
+            </p>
+          </div>
+        </div>
+
+        <div class="news-grid">
+          <!-- News Card 1 -->
+          <article class="news-card">
+            <div class="news-image-box">
+              <img src="assets/images/news/news-1.jpg" alt="Mondulkiri highland coffee cherries drying under sunlight" class="news-img" loading="lazy">
+              <span class="news-date">NOVEMBER 2026</span>
+            </div>
+            <div class="news-body">
+              <span class="news-category">ORIGIN REPORT</span>
+              <h3 class="news-title">The 2026 Mondulkiri Harvest: Unveiling This Year's Anaerobic Fermentation Lots</h3>
+              <p class="news-summary">
+                Our green buyer team spent three weeks in the highlands of Dak Dam to taste test micro-lots with indigenous Bunong community farmers.
+              </p>
+              <button class="read-story-btn" data-news-id="n1">
+                <span>Read Full Story</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="arrow-svg"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- News Card 2 -->
+          <article class="news-card">
+            <div class="news-image-box">
+              <img src="assets/images/news/news-2.jpg" alt="Specialty coffee cupping room with aroma bowls and spoons" class="news-img" loading="lazy">
+              <span class="news-date">NOVEMBER 2026</span>
+            </div>
+            <div class="news-body">
+              <span class="news-category">ROASTERY EVENTS</span>
+              <h3 class="news-title">Roaster's Tasting Lab: Weekly Public Cuppings at BKK1 Flagship</h3>
+              <p class="news-summary">
+                Join our Head Roaster every Saturday morning to learn sensory evaluation, compare processing methods, and enjoy rare micro-lots.
+              </p>
+              <button class="read-story-btn" data-news-id="n2">
+                <span>Reserve Free Seat</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="arrow-svg"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- News Card 3 -->
+          <article class="news-card">
+            <div class="news-image-box">
+              <img src="assets/images/news/news-3.jpg" alt="Reusable ceramic tumbler filled with espresso latte" class="news-img" loading="lazy">
+              <span class="news-date">ECO INITIATIVE</span>
+            </div>
+            <div class="news-body">
+              <span class="news-category">SUSTAINABILITY</span>
+              <h3 class="news-title">The Eco-Cup Movement: Over 120,000 Single-Use Cups Saved</h3>
+              <p class="news-summary">
+                Bring your favorite tumbler or reusable mug to any BROWN boutique and receive 10% off your handcrafted drink, plus double Beans on BROWN Card.
+              </p>
+              <button class="read-story-btn" data-news-id="n3">
+                <span>Learn More</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="arrow-svg"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION E: BROWN Card / Loyalty Program -->
+    <section class="section-padding brown-card-section" id="card">
+      <div class="container">
+        <div class="card-section-grid">
+          <!-- Left: Interactive 3D Card Graphic -->
+          <div class="card-visual-wrapper">
+            <div class="card-3d-scene" id="card3dScene">
+              <div class="brown-membership-card" id="membershipCardVisual">
+                <div class="card-foil-sheen"></div>
+                <div class="card-top-row">
+                  <div class="card-brand">
+                    <img src="assets/images/brown-logo.png" alt="BROWN" style="max-height:28px; width:auto; filter:brightness(0) invert(1); display:block; margin-bottom:2px;">
+                    <span class="card-brand-sub">CLUB ROASTER</span>
+                  </div>
+                  <div class="card-chip">
+                    <svg viewBox="0 0 40 30" fill="none" class="chip-svg">
+                      <rect width="40" height="30" rx="4" fill="#D4AF37"/>
+                      <line x1="12" y1="0" x2="12" y2="30" stroke="#997C22"/>
+                      <line x1="28" y1="0" x2="28" y2="30" stroke="#997C22"/>
+                      <circle cx="20" cy="15" r="4" stroke="#997C22"/>
+                    </svg>
+                  </div>
+                </div>
+                <div class="card-number-row">
+                  <span>8550</span>
+                  <span>2009</span>
+                  <span>7842</span>
+                  <span id="cardTailNum">9921</span>
+                </div>
+                <div class="card-bottom-row">
+                  <div class="card-holder">
+                    <span class="card-label">CARDHOLDER</span>
+                    <strong class="card-name" id="cardVisualName">SOVANNARITH CHHAY</strong>
+                  </div>
+                  <div class="card-tier-badge">
+                    <span class="card-label">MEMBERSHIP</span>
+                    <strong class="tier-name" id="cardTierBadge">BLACK RESERVE</strong>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <p class="card-tilt-hint">Hover or move your mouse to tilt the card</p>
+
+            <!-- Tier Switcher Interactive -->
+            <div class="card-tier-selector">
+              <span class="tier-label">Preview Tier:</span>
+              <button class="tier-btn" data-tier="silver">Silver</button>
+              <button class="tier-btn" data-tier="gold">Gold</button>
+              <button class="tier-btn active" data-tier="black">Black Reserve</button>
+            </div>
+          </div>
+
+          <!-- Right: Membership Explanation & Benefits -->
+          <div class="card-content-wrapper">
+            <span class="sub-heading">LOYALTY PRIVILEGES</span>
+            <h2 class="section-title">The BROWN Card Experience</h2>
+            <p class="lead-desc">
+              More than a coffee card—it's your passport to exclusive single-origin tastings, morning perks, contactless payment, and birthday celebrations.
+            </p>
+
+            <!-- Perks Grid -->
+            <div class="card-perks-list">
+              <div class="perk-item">
+                <div class="perk-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+                </div>
+                <div>
+                  <h4>Earn 1 Bean per $1 Spent</h4>
+                  <p>Redeem Beans for handcrafted beverages, bakery items, or specialty merchandise.</p>
+                </div>
+              </div>
+
+              <div class="perk-item">
+                <div class="perk-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                </div>
+                <div>
+                  <h4>Cashless Tap & Mobile QR Pay</h4>
+                  <p>Top-up via ABA PAY, Wing, or Bakong. Pay in seconds with a quick scan at any boutique.</p>
+                </div>
+              </div>
+
+              <div class="perk-item">
+                <div class="perk-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                </div>
+                <div>
+                  <h4>Complimentary Birthday Treat</h4>
+                  <p>Enjoy a free handcrafted beverage of any size and an artisan pastry slice on your birthday week.</p>
+                </div>
+              </div>
+
+              <div class="perk-item">
+                <div class="perk-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                </div>
+                <div>
+                  <h4>Double Bean Tuesdays</h4>
+                  <p>Accelerate your rewards with 2x points on all seasonal drinks and cold brew bottles.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- CTA Buttons -->
+            <div class="card-actions">
+              <button class="btn btn-primary" id="openCardSignupBtn">Join BROWN Club Today</button>
+              <a href="#app" class="btn btn-outline-dark">Link to Mobile App</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION F: Mobile Application Section -->
+    <section class="section-padding app-section" id="app">
+      <div class="container">
+        <div class="app-section-grid">
+          <!-- Left Content -->
+          <div class="app-text-col">
+            <span class="sub-heading">YOUR DIGITAL ROASTERY</span>
+            <h2 class="section-title">Order Ahead, Pay & Earn on the BROWN App</h2>
+            <p class="section-subtitle-left">
+              Crafted to fit your fast-moving morning routine. Customise your brew, skip the queue, pay with national QR, and manage your BROWN Card balance effortlessly.
+            </p>
+
+            <!-- Features list -->
+            <ul class="app-feature-list">
+              <li>
+                <div class="feature-check">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <div>
+                  <strong>Order Ahead & Skip the Line</strong>
+                  <span>Place your order 10 minutes prior; your freshly brewed coffee is waiting at the pickup counter.</span>
+                </div>
+              </li>
+              <li>
+                <div class="feature-check">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <div>
+                  <strong>Customise Milk & Sweetness</strong>
+                  <span>Oat milk, almond milk, sweetness levels (0%, 25%, 50%, 100%), and extra espresso shots with a tap.</span>
+                </div>
+              </li>
+              <li>
+                <div class="feature-check">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <div>
+                  <strong>Integrated KHQR & Digital Card</strong>
+                  <span>Seamless top-ups via ABA Bank, Bakong, or ACLEDA. Scan at counter or pay in-app.</span>
+                </div>
+              </li>
+            </ul>
+
+            <!-- Download Buttons (Visual) -->
+            <div class="app-download-badges">
+              <a href="#app" class="store-badge-btn" aria-label="Download on App Store">
+                <svg viewBox="0 0 24 24" fill="currentColor" class="store-icon"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.37c.62-.75 1.04-1.8 0.92-2.87-.9.04-2 .6-2.65 1.35-.57.65-1.07 1.73-0.93 2.76 1.01.08 2.04-.5 2.66-1.24z"/></svg>
+                <div class="badge-text">
+                  <span class="store-small">Download on the</span>
+                  <strong class="store-big">App Store</strong>
+                </div>
+              </a>
+
+              <a href="#app" class="store-badge-btn" aria-label="Get it on Google Play">
+                <svg viewBox="0 0 24 24" fill="currentColor" class="store-icon"><path d="M3.609 1.814L13.792 12 3.61 22.186a2.023 2.023 0 0 1-.223-.923V2.737c0-.34.08-.654.223-.923zM15.207 13.414l2.42 2.42-12.78 7.378 10.36-9.798zm0-2.828L4.847.788l12.78 7.378-2.42 2.42zm1.414 1.414l3.145 1.816c1.026.593 1.026 1.558 0 2.151l-3.145 1.816-1.414-1.414-1.414-1.414 2.828-2.955z"/></svg>
+                <div class="badge-text">
+                  <span class="store-small">GET IT ON</span>
+                  <strong class="store-big">Google Play</strong>
+                </div>
+              </a>
+            </div>
+
+            <!-- Instant Phone Link Form -->
+            <form class="phone-link-form" id="smsLinkForm" onsubmit="return false;">
+              <label for="smsPhoneInput" class="form-label">Send download link via SMS to your phone:</label>
+              <div class="input-with-btn">
+                <span class="country-prefix">+855</span>
+                <input type="tel" id="smsPhoneInput" placeholder="12 345 678" required pattern="[0-9]{8,10}">
+                <button type="submit" class="btn btn-dark">Send Link</button>
+              </div>
+            </form>
+          </div>
+
+          <!-- Right: Smartphone Device Mockup -->
+          <div class="app-mockup-col">
+            <div class="smartphone-frame">
+              <div class="phone-speaker"></div>
+              <div class="phone-screen">
+                <!-- App Header -->
+                <div class="phone-app-header">
+                  <div class="app-header-left">
+                    <span class="app-greeting">Good Morning,</span>
+                    <strong class="app-username">Sothatt</strong>
+                  </div>
+                  <div class="app-points-badge">
+                    <span>☕ 1,480 Beans</span>
+                  </div>
+                </div>
+
+                <!-- Digital Card inside App -->
+                <div class="app-digital-card">
+                  <div class="app-card-top">
+                    <span>BROWN CARD</span>
+                    <span class="app-tier-pill">BLACK RESERVE</span>
+                  </div>
+                  <div class="app-card-balance">
+                    <span class="balance-label">Stored Balance</span>
+                    <div class="balance-val">$42.50 <small>/ 172,000៛</small></div>
+                  </div>
+                  <div class="app-card-barcode">
+                    <div class="fake-barcode"></div>
+                    <span class="barcode-num">Tap to Scan & Pay</span>
+                  </div>
+                </div>
+
+                <!-- Quick Action Buttons inside App -->
+                <div class="app-quick-actions">
+                  <div class="app-action-item">
+                    <div class="action-circle">⚡</div>
+                    <span>Order Ahead</span>
+                  </div>
+                  <div class="app-action-item">
+                    <div class="action-circle">💳</div>
+                    <span>Top Up</span>
+                  </div>
+                  <div class="app-action-item">
+                    <div class="action-circle">🎁</div>
+                    <span>Rewards</span>
+                  </div>
+                  <div class="app-action-item">
+                    <div class="action-circle">📍</div>
+                    <span>Stores</span>
+                  </div>
+                </div>
+
+                <!-- Recent Favorite -->
+                <div class="app-recent-order">
+                  <div class="recent-title">Quick Reorder</div>
+                  <div class="recent-card">
+                    <img src="assets/images/products/prod-palm-sugar.jpg" alt="Palm Sugar Iced Latte thumbnail" class="recent-img">
+                    <div class="recent-details">
+                      <strong>Palm Sugar Iced Latte</strong>
+                      <span>Large • Oat Milk • 50% Sugar</span>
+                    </div>
+                    <button class="recent-reorder-btn">Reorder</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION G: Store Locations Showcase -->
+    <section class="section-padding bg-sand-subtle" id="locations">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="sub-heading">ARCHITECTURAL SANCTUARIES</span>
+          <h2 class="section-title">Visit Our Boutiques</h2>
+          <p class="section-subtitle">
+            Every BROWN store is uniquely designed to reflect modern Cambodian architecture, lush tropical plants, and welcoming neighborhood community.
+          </p>
+
+          <!-- Store City Filter -->
+          <div class="location-filters" id="locationFilterTabs">
+            <button class="filter-tab active" data-city="all">All Boutiques (25+)</button>
+            <button class="filter-tab" data-city="phnom-penh">Phnom Penh</button>
+            <button class="filter-tab" data-city="siem-reap">Siem Reap</button>
+          </div>
+        </div>
+
+        <div class="store-grid" id="storeGrid">
+          <!-- Store 1: BKK1 Flagship -->
+          <article class="store-card" data-city="phnom-penh" data-store-id="s1">
+            <div class="store-img-box">
+              <img src="assets/images/stores/store-bkk1.jpg" alt="BKK1 Flagship Roastery exterior with warm wood and glass facade" class="store-img" loading="lazy">
+              <span class="store-status open">OPEN NOW</span>
+            </div>
+            <div class="store-body">
+              <div class="store-header-line">
+                <h3 class="store-name">BKK1 Flagship Roastery</h3>
+                <span class="store-tag">FLAGSHIP</span>
+              </div>
+              <p class="store-address">
+                Corner Street 57 & Street 294, Boeung Keng Kang 1, Phnom Penh
+              </p>
+              <div class="store-hours">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                <span>Mon – Sun: 6:30 AM – 9:30 PM</span>
+              </div>
+              <div class="store-amenities">
+                <span class="amenity-pill">Specialty Pour-Over Bar</span>
+                <span class="amenity-pill">Roasting Lab</span>
+                <span class="amenity-pill">Garden Courtyard</span>
+                <span class="amenity-pill">Meeting Studio</span>
+              </div>
+              <div class="store-card-actions">
+                <button class="btn btn-sm btn-outline-dark view-store-btn" data-store-id="s1">View Location & Map</button>
+                <a href="tel:+85523215215" class="store-phone-btn" title="Call Store">📞 Call</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Store 2: Riverside Heritage -->
+          <article class="store-card" data-city="phnom-penh" data-store-id="s2">
+            <div class="store-img-box">
+              <img src="assets/images/stores/store-riverside.jpg" alt="Riverside boutique overlooking Tonle Sap river promenade" class="store-img" loading="lazy">
+              <span class="store-status open">OPEN NOW</span>
+            </div>
+            <div class="store-body">
+              <div class="store-header-line">
+                <h3 class="store-name">Riverside Heritage Boutique</h3>
+                <span class="store-tag">COLONIAL HERITAGE</span>
+              </div>
+              <p class="store-address">
+                No. 1 Sisowath Quay, Wat Phnom Commune, Daun Penh, Phnom Penh
+              </p>
+              <div class="store-hours">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                <span>Mon – Sun: 6:30 AM – 10:00 PM</span>
+              </div>
+              <div class="store-amenities">
+                <span class="amenity-pill">River View Balcony</span>
+                <span class="amenity-pill">Artisan Bakery Bar</span>
+                <span class="amenity-pill">Draft Cold Brew Tap</span>
+              </div>
+              <div class="store-card-actions">
+                <button class="btn btn-sm btn-outline-dark view-store-btn" data-store-id="s2">View Location & Map</button>
+                <a href="tel:+85523215216" class="store-phone-btn" title="Call Store">📞 Call</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Store 3: Toul Kork Treehouse -->
+          <article class="store-card" data-city="phnom-penh" data-store-id="s3">
+            <div class="store-img-box">
+              <img src="assets/images/stores/store-toulkork.jpg" alt="Modern treehouse pavilion boutique surrounded by greenery" class="store-img" loading="lazy">
+              <span class="store-status open">OPEN NOW</span>
+            </div>
+            <div class="store-body">
+              <div class="store-header-line">
+                <h3 class="store-name">Toul Kork Treehouse Roastery</h3>
+                <span class="store-tag">DRIVE-THRU</span>
+              </div>
+              <p class="store-address">
+                Street 315 (near TK Avenue), Toul Kork, Phnom Penh
+              </p>
+              <div class="store-hours">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                <span>Mon – Sun: 6:00 AM – 9:00 PM</span>
+              </div>
+              <div class="store-amenities">
+                <span class="amenity-pill">Drive-Thru Lane</span>
+                <span class="amenity-pill">Two-Story Glass Atrium</span>
+                <span class="amenity-pill">Dedicated Parking</span>
+              </div>
+              <div class="store-card-actions">
+                <button class="btn btn-sm btn-outline-dark view-store-btn" data-store-id="s3">View Location & Map</button>
+                <a href="tel:+85523215217" class="store-phone-btn" title="Call Store">📞 Call</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Store 4: Siem Reap Wat Bo -->
+          <article class="store-card" data-city="siem-reap" data-store-id="s4">
+            <div class="store-img-box">
+              <img src="assets/images/stores/store-siemreap.jpg" alt="Siem Reap heritage courtyard boutique with Khmer architectural details" class="store-img" loading="lazy">
+              <span class="store-status open">OPEN NOW</span>
+            </div>
+            <div class="store-body">
+              <div class="store-header-line">
+                <h3 class="store-name">Wat Bo Heritage Boutique</h3>
+                <span class="store-tag">SIEM REAP</span>
+              </div>
+              <p class="store-address">
+                Wat Bo Village, Salakamreuk Commune, Siem Reap (Near Wat Bo Temple)
+              </p>
+              <div class="store-hours">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                <span>Mon – Sun: 6:30 AM – 9:30 PM</span>
+              </div>
+              <div class="store-amenities">
+                <span class="amenity-pill">Angkor Sandstone Courtyard</span>
+                <span class="amenity-pill">Local Art Exhibitions</span>
+                <span class="amenity-pill">Bicycle Racks</span>
+              </div>
+              <div class="store-card-actions">
+                <button class="btn btn-sm btn-outline-dark view-store-btn" data-store-id="s4">View Location & Map</button>
+                <a href="tel:+85563969969" class="store-phone-btn" title="Call Store">📞 Call</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION H: Merchandise & Whole Beans -->
+    <section class="section-padding merch-section" id="merchandise">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="sub-heading">THE ROASTER'S ATELIER</span>
+          <h2 class="section-title">Merchandise & Whole Beans</h2>
+          <p class="section-subtitle">
+            Bring the aroma and calm of BROWN home. Hand-thrown ceramics, vacuum-insulated thermal tumblers, and freshly bagged single-origin coffees.
+          </p>
+        </div>
+
+        <div class="merch-grid">
+          <!-- Merch 1 -->
+          <article class="merch-card">
+            <div class="merch-media">
+              <span class="merch-tag">LIMITED CRAFT</span>
+              <img src="assets/images/merch/merch-mug.jpg" alt="Matte black ceramic coffee mug with minimalist BROWN stamp" class="merch-img" loading="lazy">
+              <button class="btn btn-primary merch-add-btn" data-merch-id="m1" data-name="Matte Ceramic Roaster Mug" data-price="16.50">Add to Bag • $16.50</button>
+            </div>
+            <div class="merch-info">
+              <span class="merch-cat">DRINKWARE</span>
+              <h3 class="merch-title">Matte Ceramic Roaster Mug (350ml)</h3>
+              <p class="merch-desc">Locally fired stoneware with ergonomic handle and matte charcoal glaze. Retains heat for pour-overs.</p>
+              <div class="merch-price-row">
+                <span class="price">$16.50 <small>/ 66,000៛</small></span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Merch 2 -->
+          <article class="merch-card">
+            <div class="merch-media">
+              <span class="merch-tag">BESTSELLER</span>
+              <img src="assets/images/merch/merch-tumbler.jpg" alt="Double-walled stainless steel travel tumbler in mocha finish" class="merch-img" loading="lazy">
+              <button class="btn btn-primary merch-add-btn" data-merch-id="m2" data-name="Double-Walled Thermal Tumbler" data-price="22.00">Add to Bag • $22.00</button>
+            </div>
+            <div class="merch-info">
+              <span class="merch-cat">ECO GEAR</span>
+              <h3 class="merch-title">Double-Walled Thermal Tumbler (500ml)</h3>
+              <p class="merch-desc">Keeps cold brew icy for 18 hours or latte piping hot for 8 hours. 10% discount on refills forever.</p>
+              <div class="merch-price-row">
+                <span class="price">$22.00 <small>/ 88,000៛</small></span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Merch 3 -->
+          <article class="merch-card">
+            <div class="merch-media">
+              <span class="merch-tag">BREWING GEAR</span>
+              <img src="assets/images/merch/merch-dripper.jpg" alt="Origami ceramic dripper and glass coffee server set" class="merch-img" loading="lazy">
+              <button class="btn btn-primary merch-add-btn" data-merch-id="m3" data-name="Origami Ceramic Dripper Set" data-price="34.00">Add to Bag • $34.00</button>
+            </div>
+            <div class="merch-info">
+              <span class="merch-cat">BARISTA TOOLS</span>
+              <h3 class="merch-title">Origami Dripper & Glass Server Set</h3>
+              <p class="merch-desc">Japanese ceramic cone dripper with 20 flute channels paired with 500ml heatproof borosilicate carafe.</p>
+              <div class="merch-price-row">
+                <span class="price">$34.00 <small>/ 136,000៛</small></span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Merch 4 -->
+          <article class="merch-card">
+            <div class="merch-media">
+              <span class="merch-tag">FRESH ROAST</span>
+              <img src="assets/images/merch/merch-beans.jpg" alt="Mondulkiri Single Origin 250g coffee bean bag" class="merch-img" loading="lazy">
+              <button class="btn btn-primary merch-add-btn" data-merch-id="m4" data-name="Mondulkiri Honey Whole Bean (250g)" data-price="14.50">Add to Bag • $14.50</button>
+            </div>
+            <div class="merch-info">
+              <span class="merch-cat">SINGLE ORIGIN LOT</span>
+              <h3 class="merch-title">Mondulkiri Honey Whole Bean (250g)</h3>
+              <p class="merch-desc">Degassed with one-way degassing valve. Roasted fresh every Tuesday. Tasting: Wild Honey, Citrus, Cocoa.</p>
+              <div class="merch-price-row">
+                <span class="price">$14.50 <small>/ 58,000៛</small></span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION I: Our Story / Heritage -->
+    <section class="section-padding story-section" id="story">
+      <div class="container">
+        <div class="story-grid">
+          <!-- Story Narrative Column -->
+          <div class="story-content-col">
+            <span class="sub-heading">THE CAMBODIAN CRAFT JOURNEY</span>
+            <h2 class="section-title">Born in Phnom Penh, Rooted in Passion</h2>
+            <p class="story-lead">
+              In 2009, a group of young Cambodian university graduates and architects gathered with one simple, audacious dream: to create a genuine specialty coffee culture in Cambodia that rivals the best in the world.
+            </p>
+            <p>
+              Back then, Phnom Penh drank dark-roasted robusta with sweet condensed milk on street corners. We believed Cambodian palates deserved to experience the nuanced floral, fruity, and chocolate notes of ethically sourced Arabica beans—served in architecturally striking spaces that inspire creativity, connection, and pride.
+            </p>
+
+            <blockquote class="story-quote">
+              "We didn't just want to serve coffee; we wanted to craft a communal living room for Cambodia's dreamers, thinkers, and creators."
+            </blockquote>
+
+            <!-- Timeline Milestones -->
+            <div class="story-milestones">
+              <div class="milestone-item">
+                <span class="milestone-year">2009</span>
+                <div class="milestone-detail">
+                  <strong>First Store Opened</strong>
+                  <p>Our very first boutique opened on Street 214 in Phnom Penh with just 8 baristas.</p>
+                </div>
+              </div>
+
+              <div class="milestone-item">
+                <span class="milestone-year">2014</span>
+                <div class="milestone-detail">
+                  <strong>Mondulkiri Direct Trade</strong>
+                  <p>Partnered with indigenous Bunong coffee growers to plant Arabica at 850m elevation.</p>
+                </div>
+              </div>
+
+              <div class="milestone-item">
+                <span class="milestone-year">2018</span>
+                <div class="milestone-detail">
+                  <strong>BROWN Barista Academy</strong>
+                  <p>Established our training academy to certify SCA-standard Cambodian baristas and roasters.</p>
+                </div>
+              </div>
+
+              <div class="milestone-item">
+                <span class="milestone-year">2026</span>
+                <div class="milestone-detail">
+                  <strong>25+ Boutiques & Beyond</strong>
+                  <p>Serving over 15,000 cups daily across Phnom Penh and Siem Reap with 1,000+ local team members.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="story-actions">
+              <button class="btn btn-primary" id="readHeritageFullBtn">Read Complete Heritage Book</button>
+            </div>
+          </div>
+
+          <!-- Story Visual Mosaic Grid -->
+          <div class="story-mosaic-col">
+            <div class="mosaic-grid">
+              <div class="mosaic-item mosaic-item-1">
+                <img src="assets/images/story/story-roasting.jpg" alt="Artisan coffee roaster turning coffee beans" class="mosaic-img" loading="lazy">
+                <div class="mosaic-caption">Roasting Lab in Phnom Penh</div>
+              </div>
+              <div class="mosaic-item mosaic-item-2">
+                <img src="assets/images/story/story-barista.jpg" alt="Skilled barista carefully pouring swan latte art" class="mosaic-img" loading="lazy">
+                <div class="mosaic-caption">Certified SCA Baristas</div>
+              </div>
+              <div class="mosaic-item mosaic-item-3">
+                <img src="assets/images/story/story-farm.jpg" alt="Highland coffee plantation with red ripe coffee cherries" class="mosaic-img" loading="lazy">
+                <div class="mosaic-caption">Mondulkiri Highlands</div>
+              </div>
+              <div class="mosaic-item mosaic-item-4">
+                <img src="assets/images/story/story-interior.jpg" alt="Natural sunlight streaming into boutique dining space" class="mosaic-img" loading="lazy">
+                <div class="mosaic-caption">Architectural Warmth</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Careers Section Highlight -->
+    <section class="section-padding bg-sand-subtle careers-section" id="careers">
+      <div class="container text-center max-w-750">
+        <span class="sub-heading">GROW WITH BROWN</span>
+        <h2 class="section-title">Join Our Passionate Family</h2>
+        <p class="section-subtitle">
+          We are always looking for friendly, curious individuals who share our love for hospitality, craft coffee, bakery arts, and community service.
+        </p>
+        <div class="careers-perks-row">
+          <div class="career-pill">SCA Barista Certification</div>
+          <div class="career-pill">Health & Dental Coverage</div>
+          <div class="career-pill">Clear Leadership Paths</div>
+          <div class="career-pill">Daily Free Handcrafted Brews</div>
+        </div>
+        <div class="mt-4">
+          <button class="btn btn-primary" id="openCareersModalBtn">View Open Positions (8)</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter & Community Subscription Section -->
+    <section class="newsletter-section">
+      <div class="container">
+        <div class="newsletter-box">
+          <div class="newsletter-content">
+            <span class="sub-heading text-amber">THE ROASTER'S DISPATCH</span>
+            <h2 class="newsletter-title">Subscribe to Coffee Letters & Roaster Drops</h2>
+            <p class="newsletter-desc">
+              Receive early invitations to limited single-origin drops, cupping sessions, and member promotions directly in your inbox.
+            </p>
+          </div>
+          <form class="newsletter-form" id="newsletterForm" novalidate>
+            <div class="newsletter-input-group">
+              <input type="email" id="newsletterEmail" class="newsletter-input" placeholder="Enter your email address" required>
+              <button type="submit" class="btn btn-primary newsletter-submit-btn">Subscribe</button>
+            </div>
+            <div class="newsletter-preferences">
+              <label class="pref-label">
+                <input type="checkbox" id="prefWholeBeans" checked> New Bean Drops
+              </label>
+              <label class="pref-label">
+                <input type="checkbox" id="prefPromotions" checked> Member Promotions
+              </label>
+              <label class="pref-label">
+                <input type="checkbox" id="prefEvents"> Roastery Events
+              </label>
+            </div>
+            <span class="form-feedback" id="newsletterFeedback"></span>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- SECTION J: Comprehensive Footer -->
+  <footer class="site-footer">
+    <div class="container footer-top">
+      <div class="footer-grid">
+        <!-- Col 1: Brand & Bio -->
+        <div class="footer-col brand-col">
+          <div class="footer-logo">
+            <img src="assets/images/brown-logo.png" alt="BROWN Coffee and Bakery" class="footer-logo-img">
+          </div>
+          <p class="footer-bio">
+            Pioneering Cambodian specialty coffee culture since 2009. We roast single-origin highland beans, bake fresh French pastries daily, and build architectural community spaces.
+          </p>
+          <div class="footer-khmer-tag">
+            ប្រោន កាហ្វេ • កាហ្វេពិសេសខ្មែរ
+          </div>
+        </div>
+
+        <!-- Col 2: Navigation Links -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Explore</h4>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#menu">Handcrafted Menu</a></li>
+            <li><a href="#card">BROWN Card Perks</a></li>
+            <li><a href="#app">Mobile Application</a></li>
+            <li><a href="#locations">Store Directory</a></li>
+            <li><a href="#merchandise">Merchandise & Beans</a></li>
+            <li><a href="#promotions">News & Promotions</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Company & Story -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Our Company</h4>
+          <ul class="footer-links">
+            <li><a href="#story">Our 15-Year Story</a></li>
+            <li><a href="#story">Mondulkiri Coffee Project</a></li>
+            <li><a href="#story">BROWN Barista Academy</a></li>
+            <li><a href="#careers">Careers & Opportunities</a></li>
+            <li><a href="#promotions">Sustainability & Eco Cup</a></li>
+            <li><a href="#" id="openContactTrigger">Media & Press Kit</a></li>
+            <li><a href="#" id="openFeedbackTrigger">Customer Feedback</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Contact & Hours -->
+        <div class="footer-col contact-col">
+          <h4 class="footer-heading">Get in Touch</h4>
+          <div class="contact-details">
+            <p><strong>Roastery HQ:</strong><br>Street 57, BKK1, Phnom Penh, Kingdom of Cambodia</p>
+            <p><strong>Customer Care:</strong><br><a href="tel:+85523215215">+855 (0) 23 215 215</a></p>
+            <p><strong>Email:</strong><br><a href="mailto:info@browncoffee.com.kh">info@browncoffee.com.kh</a></p>
+            <p><strong>Operating Hours:</strong><br>Mon – Sun: 6:30 AM – 9:30 PM</p>
+          </div>
+          <div class="footer-social-icons">
+            <a href="https://facebook.com" target="_blank" rel="noopener" class="social-icon" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="social-icon" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="https://telegram.org" target="_blank" rel="noopener" class="social-icon" aria-label="Telegram">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 0 0-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.75-.55 2.92-1.27 4.86-2.11 5.83-2.52 2.77-1.16 3.35-1.36 3.73-1.37.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener" class="social-icon" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Bottom Bar -->
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p class="copyright-text">
+          &copy; 2009 – 2026 BROWN Coffee & Roastery Co., Ltd. All rights reserved. Inspired by Cambodian Specialty Coffee.
+        </p>
+        <div class="footer-legal-links">
+          <a href="#" class="legal-link" id="openPrivacyModal">Privacy Policy</a>
+          <span class="sep">•</span>
+          <a href="#" class="legal-link" id="openTermsModal">Terms of Service</a>
+          <span class="sep">•</span>
+          <a href="#" class="legal-link" id="openCookieModal">Cookie Settings</a>
+        </div>
+        <div class="payment-partners">
+          <span class="payment-badge">ABA PAY</span>
+          <span class="payment-badge">KHQR</span>
+          <span class="payment-badge">BAKONG</span>
+          <span class="payment-badge">VISA</span>
+          <span class="payment-badge">MASTERCARD</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING UTILITIES -->
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="backToTopBtn" aria-label="Back to top" title="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="btt-svg">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+    <svg class="progress-ring" viewBox="0 0 44 44">
+      <circle class="progress-ring__circle" stroke="#B87333" stroke-width="2" fill="transparent" r="20" cx="22" cy="22"/>
+    </svg>
+  </button>
+
+  <!-- INTERACTIVE MODALS & DRAWERS -->
+
+  <!-- 1. Search Overlay Modal -->
+  <div class="modal-backdrop search-modal-backdrop" id="searchModal" aria-hidden="true">
+    <div class="search-modal-container">
+      <div class="search-input-wrapper">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="modal-search-icon"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="search" id="siteSearchInput" placeholder="Search menu, cold brews, whole beans, or stores..." autocomplete="off">
+        <button class="modal-close-icon" id="closeSearchModal" aria-label="Close search">&times;</button>
+      </div>
+
+      <div class="search-quick-tags">
+        <span>Popular:</span>
+        <button class="tag-btn" data-query="Palm Sugar">Palm Sugar</button>
+        <button class="tag-btn" data-query="Cold Brew">Cold Brew</button>
+        <button class="tag-btn" data-query="Mondulkiri">Mondulkiri Beans</button>
+        <button class="tag-btn" data-query="Croissant">Croissant</button>
+        <button class="tag-btn" data-query="BKK1">BKK1 Roastery</button>
+      </div>
+
+      <div class="search-results-box" id="searchResultsBox">
+        <div class="search-placeholder-msg">Type at least 2 characters to search across our full catalog...</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. Product Quick-View Modal -->
+  <div class="modal-backdrop quickview-modal-backdrop" id="quickViewModal" aria-hidden="true">
+    <div class="quickview-modal-dialog">
+      <button class="modal-close-btn" id="closeQuickViewBtn" aria-label="Close product view">&times;</button>
+      <div class="quickview-body" id="quickViewModalContent">
+        <!-- Dynamically injected via JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. Store Location & Map Modal -->
+  <div class="modal-backdrop location-modal-backdrop" id="storeModal" aria-hidden="true">
+    <div class="location-modal-dialog">
+      <button class="modal-close-btn" id="closeStoreModalBtn" aria-label="Close store details">&times;</button>
+      <div class="store-modal-body" id="storeModalContent">
+        <!-- Dynamically injected via JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. Story Article Reading Modal -->
+  <div class="modal-backdrop story-modal-backdrop" id="storyModal" aria-hidden="true">
+    <div class="story-modal-dialog">
+      <button class="modal-close-btn" id="closeStoryModalBtn" aria-label="Close story">&times;</button>
+      <div class="story-modal-body" id="storyModalContent">
+        <!-- Dynamically injected via JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- 5. BROWN Card Login & Account Modal -->
+  <div class="modal-backdrop account-modal-backdrop" id="accountModal" aria-hidden="true">
+    <div class="account-modal-dialog">
+      <button class="modal-close-btn" id="closeAccountModalBtn" aria-label="Close member account">&times;</button>
+      <div class="account-modal-body">
+        <!-- Official Logo Header -->
+        <div class="account-modal-header text-center">
+          <img src="assets/images/brown-logo.png" alt="BROWN Coffee and Bakery" class="account-official-logo">
+          <p class="modal-sub">Sign in to your BROWN Club account or activate your digital membership</p>
+        </div>
+
+        <!-- Auth Tabs: Sign In / Register -->
+        <div class="modal-auth-tabs" role="tablist">
+          <button class="modal-tab-btn active" id="modalTabSignIn" role="tab" aria-selected="true">Sign In</button>
+          <button class="modal-tab-btn" id="modalTabRegister" role="tab" aria-selected="false">Join BROWN Club</button>
+        </div>
+
+        <!-- SIGN IN FORM -->
+        <form class="account-form" id="modalLoginForm" onsubmit="return false;">
+          <div class="form-group">
+            <label for="modalLoginPhone">Phone Number or Email</label>
+            <div class="auth-input-wrapper">
+              <div class="phone-prefix-badge">🇰🇭 +855</div>
+              <input type="tel" id="modalLoginPhone" class="phone-input" placeholder="12 345 678" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="modalLoginPass">Password</label>
+            <div class="auth-input-wrapper">
+              <input type="password" id="modalLoginPass" placeholder="••••••••" required>
+              <button type="button" class="password-toggle-btn" id="modalTogglePass">Show</button>
+            </div>
+          </div>
+
+          <div class="auth-options-row">
+            <label class="remember-label">
+              <input type="checkbox" id="modalRememberMe" checked> Remember me
+            </label>
+            <a href="#" class="forgot-pass-link" onclick="alert('Password reset link sent to your mobile phone.'); return false;">Forgot password?</a>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block" id="modalLoginSubmitBtn">Sign In to BROWN</button>
+
+          <div class="auth-divider">
+            <span>or sign in with</span>
+          </div>
+
+          <div class="social-auth-grid">
+            <button type="button" class="social-auth-btn aba-auth-btn" id="modalAbaLoginBtn">
+              <span class="aba-badge-icon">ABA</span>
+              <span>Quick Sign In with ABA Mobile</span>
+            </button>
+            <button type="button" class="social-auth-btn" id="modalGoogleLoginBtn">
+              <svg width="18" height="18" viewBox="0 0 24 24"><path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.66-5.17 3.66-9.17z"/><path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.25v3.15C3.26 21.36 7.33 24 12 24z"/><path fill="#FBBC05" d="M5.28 14.27c-.25-.72-.38-1.49-.38-2.27s.13-1.55.38-2.27V6.58H1.25C.45 8.18 0 9.99 0 12s.45 3.82 1.25 5.42l4.03-3.15z"/><path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.33 0 3.26 2.64 1.25 6.58l4.03 3.15c.95-2.83 3.6-4.98 6.72-4.98z"/></svg>
+              <span>Continue with Google</span>
+            </button>
+            <button type="button" class="social-auth-btn" id="modalAppleLoginBtn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.37c.62-.75 1.04-1.8 0.92-2.87-.9.04-2 .6-2.65 1.35-.57.65-1.07 1.73-0.93 2.76 1.01.08 2.04-.5 2.66-1.24z"/></svg>
+              <span>Continue with Apple</span>
+            </button>
+          </div>
+        </form>
+
+        <!-- REGISTER FORM -->
+        <form class="account-form" id="cardSignupForm" style="display:none;" onsubmit="return false;">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="memberNameInput">Full Name</label>
+              <input type="text" id="memberNameInput" placeholder="e.g. Sovannarith Chhay" required>
+            </div>
+            <div class="form-group">
+              <label for="memberPhoneInput">Cambodian Phone</label>
+              <div class="auth-input-wrapper">
+                <div class="phone-prefix-badge">🇰🇭 +855</div>
+                <input type="tel" id="memberPhoneInput" class="phone-input" placeholder="12 345 678" required>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="memberEmailInput">Email Address</label>
+            <input type="email" id="memberEmailInput" placeholder="name@example.com" required>
+          </div>
+          <div class="form-group">
+            <label for="memberStoreSelect">Preferred Roastery</label>
+            <select id="memberStoreSelect">
+              <option value="bkk1">BKK1 Flagship Roastery (Phnom Penh)</option>
+              <option value="riverside">Riverside Heritage Boutique (Phnom Penh)</option>
+              <option value="toulkork">Toul Kork Treehouse (Phnom Penh)</option>
+              <option value="siemreap">Wat Bo Heritage (Siem Reap)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="memberPasswordInput">Create Password</label>
+            <input type="password" id="memberPasswordInput" placeholder="At least 6 characters" required>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Join BROWN Club & Get Free Brew</button>
+          <p class="form-terms">
+            By activating, you agree to the BROWN Loyalty Program Terms and Privacy Policy. Free welcome drink voucher loaded instantly.
+          </p>
+        </form>
+
+        <!-- ACTIVE LOGGED-IN PROFILE (Shown upon sign-in) -->
+        <div id="modalLoggedInView" style="display:none; text-align:center; padding:10px 0;">
+          <div style="width:64px; height:64px; border-radius:50%; background:var(--color-sand); color:var(--color-amber); font-size:1.6rem; display:flex; align-items:center; justify-content:center; margin:0 auto 12px; border:2px solid var(--color-amber);">
+            ☕
+          </div>
+          <h3 style="font-family:var(--font-serif); font-size:1.6rem; color:var(--color-roast); margin-bottom:2px;" id="modalLoggedUserName">Sovannarith Chhay</h3>
+          <span style="font-size:0.75rem; font-weight:700; letter-spacing:0.1em; color:var(--color-copper); background:var(--color-sand); padding:3px 10px; border-radius:var(--radius-pill); display:inline-block; margin-bottom:16px;">
+            BLACK RESERVE MEMBER
+          </span>
+
+          <div style="background:var(--color-sand); border-radius:var(--radius-md); padding:16px; margin-bottom:18px; text-align:left;">
+            <div style="display:flex; justify-content:space-between; margin-bottom:6px;">
+              <span style="font-size:0.8125rem; color:var(--color-text-secondary);">Stored Card Balance:</span>
+              <strong style="color:var(--color-roast); font-size:1.1rem;">$42.50 <small>/ 172,000៛</small></strong>
+            </div>
+            <div style="display:flex; justify-content:space-between;">
+              <span style="font-size:0.8125rem; color:var(--color-text-secondary);">Loyalty Beans:</span>
+              <strong style="color:var(--color-amber); font-size:1.1rem;">1,480 Beans</strong>
+            </div>
+          </div>
+
+          <a href="#menu" class="btn btn-primary btn-block mb-3" onclick="document.getElementById('closeAccountModalBtn').click();">Order Ahead with Balance</a>
+          <button type="button" class="btn btn-outline-dark btn-block" id="modalLogoutBtn">Sign Out</button>
+        </div>
+
+        <div style="text-align:center; margin-top:20px; padding-top:14px; border-top:1px dashed var(--color-latte-border);">
+          <a href="login.html" style="font-size:0.8125rem; color:var(--color-text-secondary); text-decoration:underline;">
+            Open dedicated full-screen login page ↗
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 6. Cart / Bag Drawer -->
+  <aside class="cart-drawer" id="cartDrawer" aria-hidden="true">
+    <div class="cart-drawer-backdrop" id="cartBackdrop"></div>
+    <div class="cart-drawer-panel">
+      <div class="cart-drawer-header">
+        <div class="cart-header-title">
+          <h3>Your Coffee Bag</h3>
+          <span class="cart-count-sub" id="cartCountSub">0 items</span>
+        </div>
+        <button class="cart-close-btn" id="closeCartBtn" aria-label="Close bag">&times;</button>
+      </div>
+
+      <div class="cart-drawer-items" id="cartItemsContainer">
+        <!-- Rendered by JS -->
+      </div>
+
+      <div class="cart-drawer-footer">
+        <div class="cart-subtotal-row">
+          <span>Subtotal</span>
+          <strong id="cartSubtotalVal">$0.00</strong>
+        </div>
+        <div class="cart-khr-row">
+          <span>Cambodian Riel (approx.)</span>
+          <strong id="cartSubtotalKHR">0៛</strong>
+        </div>
+        <p class="cart-tax-notice">Taxes included. Pickup ready in 15 mins at your selected Roastery.</p>
+        <button class="btn btn-primary btn-block checkout-btn" id="cartCheckoutBtn">Proceed to Mobile Pickup ($0.00)</button>
+        <button class="btn btn-outline-dark btn-block btn-sm mt-2" id="clearCartBtn">Clear Bag</button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- 7. Floating Toast Notification Container -->
+  <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+  <!-- Main JavaScript File -->
+  <script src="js/main.js"></script>
+</body>
+</html>
